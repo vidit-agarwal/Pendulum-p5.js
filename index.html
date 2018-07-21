@@ -1,0 +1,37 @@
+<!DOCTYPE html><html><head>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+  
+    <div>
+      <input type="text" id="length" placeholder="Enter the length" value="2">m 
+      <input type="text" id="gravity" placeholder="Enter the gravity" value="9.8"> m/s^2
+
+      
+    </div>
+
+    <div id="time_pend">
+
+    </div>
+    <script>
+      function timec()
+      {
+          var len = document.getElementById("length").value;
+          var g = document.getElementById("gravity").value ;
+          document.getElementById("time_pend").innerHTML = Math.sqrt(len/g) * 2* Math.PI + 's';
+      }
+
+      timec() ;
+    </script>
+    <script src="sketch.js"></script>
+
+
+
+  
+  
+
+</body></html>
